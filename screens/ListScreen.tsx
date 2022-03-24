@@ -17,7 +17,8 @@ const carousel1 = ({ item, index }) => {
     }}>
       <Image
         style={{ resizeMode: "contain", width: 300, height: 300 }}
-        source={{ uri: item }}
+        source={item ? { uri: item } : require('../assets/image-not-available.png')}
+      //source={{ uri: item }}
       />
       <Text>{item.title}</Text>
     </View>
